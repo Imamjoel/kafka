@@ -8,11 +8,7 @@ server:
 spring:
   main:
     banner-mode: OFF
-  h2:
-    console:
-      enabled: true
-  datasource:
-    url: jdbc:h2:mem:kafkaorderdb
+    log-startup-info: false
   kafka:
     listener:
       missing-topics-fatal: false
@@ -22,15 +18,17 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     consumer:
-      group-id: kafka-order-cg
+      group-id: kafka-reward-cg
       enable-auto-commit: true
       auto-offset-reset: earliest
       bootstrap-servers:
       - localhost:9092
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer        
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring:
           json:
-            trusted:
+            trusted: 
               packages: com.eccomers.broker.message
+        
+        
