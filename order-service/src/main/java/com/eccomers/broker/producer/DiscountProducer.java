@@ -13,7 +13,7 @@ public class DiscountProducer {
 	private KafkaTemplate<String, DiscountMessage> kafkaTemplate;
 
 	public void publish(DiscountMessage message) {
-		kafkaTemplate.send("t_commodity_promotion", message);
+		kafkaTemplate.send("t.commodity.promotion", message);
 	}
 
 }

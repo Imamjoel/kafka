@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="kafka-service-stream" />
         <module name="order-service" />
         <module name="storage-service" />
         <module name="pattern-service" />
@@ -13,6 +14,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="kafka-service-stream" target="11" />
       <module name="order-service" target="11" />
       <module name="pattern-service" target="11" />
       <module name="reward-service" target="11" />
@@ -21,6 +23,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="kafka-service-stream" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="pattern-service" options="-parameters" />
       <module name="reward-service" options="-parameters" />

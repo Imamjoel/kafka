@@ -34,7 +34,7 @@ public class OrderProducer {
     	var surpriceBonusHeader = new RecordHeader("surpriceBonus", Double.toString(surpriceBonus).getBytes());
     	headers.add(surpriceBonusHeader);
     	
-    	return new ProducerRecord<String, OrderMessage>("t_commodity_order", null, message.getOrderNumber(), message, headers);
+    	return new ProducerRecord<String, OrderMessage>("t.commodity.order", null, message.getOrderNumber(), message, headers);
     	
 	}
 

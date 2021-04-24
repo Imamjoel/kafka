@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/kafka.iml" filepath="$PROJECT_DIR$/.idea/kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-service-stream/kafka-service-stream.iml" filepath="$PROJECT_DIR$/kafka-service-stream/kafka-service-stream.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-service/order-service.iml" filepath="$PROJECT_DIR$/order-service/order-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pattern-service/pattern-service.iml" filepath="$PROJECT_DIR$/pattern-service/pattern-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/reward-service/reward-service.iml" filepath="$PROJECT_DIR$/reward-service/reward-service.iml" />

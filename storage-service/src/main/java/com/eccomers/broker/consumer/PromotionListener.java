@@ -10,7 +10,7 @@ import com.eccomers.broker.message.DiscountMessage;
 import com.eccomers.broker.message.PromotionMessage;
 
 @Service
-@KafkaListener(topics = "t_commodity_promotion")
+@KafkaListener(topics = "t.commodity.promotion")
 public class PromotionListener {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(PromotionListener.class);

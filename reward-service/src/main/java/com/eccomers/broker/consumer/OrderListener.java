@@ -13,7 +13,7 @@ public class OrderListener {
 
 	private static final Logger LOG = LoggerFactory.getLogger(OrderListener.class);
 	
-	@KafkaListener(topics = "t_commodity_order")
+	@KafkaListener(topics = "t.commodity.order")
 	public void listen(ConsumerRecord<String, OrderMessage> consumerRecord) {
 		var headers = consumerRecord.headers();
 		var orderMessage = consumerRecord.value();

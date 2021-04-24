@@ -20,7 +20,7 @@ public class PromotionProducer {
 	
 	public void publish(PromotionMessage message) {
 		try {
-			var sendResult = kafkaTemplate.send("t_commodity_promotion", message).get();
+			var sendResult = kafkaTemplate.send("t.commodity.promotion", message).get();
 			
 			LOG.info("send result success for message {}", sendResult.getProducerRecord().value());
 		} catch (InterruptedException | ExecutionException  e) {

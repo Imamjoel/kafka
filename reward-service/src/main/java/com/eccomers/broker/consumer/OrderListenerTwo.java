@@ -15,8 +15,8 @@ public class OrderListenerTwo {
 
 	private static final Logger LOG = LoggerFactory.getLogger(OrderListenerTwo.class);
 	
-	@KafkaListener(topics = "t_commodity_order")
-	@SendTo("t_commodity_order-reply")
+	@KafkaListener(topics = "t.commodity.order")
+	@SendTo("t.commodity.order-reply")
 	public OrderReplyMessage listen(ConsumerRecord<String, OrderMessage> consumerRecord) {
 		var headers = consumerRecord.headers();
 		var orderMessage = consumerRecord.value();

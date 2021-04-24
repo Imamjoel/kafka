@@ -13,7 +13,7 @@ public class OrderListener {
 	private static final Logger LOG = LoggerFactory.getLogger(OrderListener.class);
 	
 	
-	@KafkaListener(topics = "t_commodity_order")
+	@KafkaListener(topics = "t.commodity.order")
 	public void listener(OrderMessage message) {
 		var totalItemAmount = message.getPrice() * message.getQuantity();
 		
